@@ -1,0 +1,130 @@
+<!doctype HTML>
+<html>
+    <head>
+        <title>Near Shore</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta charset="utf-8">
+        <meta name="description" content="Sky — A-Frame">
+        <script src="https://aframe.io/releases/0.2.0/aframe.js"></script>
+        <script src="aframe.min.js"></script>
+     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+     <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+
+<style>
+      .intro-overlay {
+        z-index: 1;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        max-width: 280px;
+        box-sizing: border-box;
+        padding: 1.5em;
+
+        color: #FFF;
+        background: #222;
+        font-family: Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
+      }
+    
+      .music-overlay {
+        z-index: 99999;
+        position: fixed; 
+        bottom: 20px;
+        left: 20px;
+        box-sizing: border-box;
+        padding: 1.5em;
+        width: 60px;
+        height: 60px;
+        padding-bottom: 0px;
+
+        color: #FFF;
+        background: rgba(255, 255, 255, 0.2) url(http://www.thekandinskyeffect.com/wp-content/themes/somnambulist/assets/icon_sc.svg) center no-repeat;
+        font-family: Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
+      }
+        
+      .menu-overlay {
+         z-index: 99999;
+        position: fixed; 
+        top: 20px;
+        right: 20px;
+        box-sizing: border-box;
+        padding: 1.5em;
+        width: 60px;
+        height: 60px;
+        padding-bottom: 0px;
+
+        color: #FFF;
+        background: rgba(0, 0, 0, 0.5) url(http://www.mrfencer.co.nz/edit/image_cache/icon_menu_960x5000c0.png) center no-repeat;
+        font-family: Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif; 
+      }
+
+    </style>
+    
+    
+    
+
+    </head>
+    <body>
+  
+        <a-scene>
+            <a-assets>
+                <img id="image" crossorigin="" src="https://ucarecdn.com/c87b5ff9-95cc-4fc1-a1ef-bdc74abc20d0/R00100501_xmp.JPG">
+                <!--<img id="image2" crossorigin="" src="images\R0010050[1]_xmp.jpg">-->
+                <a><img id="texture" crossorigin="" src="https://ucarecdn.com/1d4a4fac-3ad1-4f37-bd00-6238fc530735/norag.jpg"></a>
+                <a href="index.html"><img id="texture2" crossorigin ="" src = "https://ucarecdn.com/e1e3187e-3683-4be1-b000-398b3114e80f/norag2.jpg"></a>
+                <audio id="audio" src="RockeyThemesong.mp3">
+            </a-assets>
+           <!-- <a-entity position="0 1.8 4">
+                <a-entity camera="active:true" look-controls="" mouse-cursor="" rotation="0 0 0" position="0 0 0">
+                <a-cursor fuse="true" color="yellow" material="shader:flat;opacity:0.8;color:yellow" cursor="maxDistance:1000;fuse:true" geometry="primitive:ring;radiusOuter:0.016;radiusInner:0.01;segmentsTheta:64" position="0 0 -1" raycaster=""></a-cursor>
+                </a-entity>-->
+           <a-entity>
+               <a-camera id="camera">
+               <a-cursor color="#4CC3D9"></a-cursor>
+               </a-camera>
+            </a-entity>
+            <a-box color="#FFF" width="4" height="10" depth="2" position="20 2 -5" rotation="0 0 45" scale="2 0.5 3" src="#texture">
+    <!-- Animation will only play when the box is clicked. -->
+                <a-event name="mouseenter" scale="2 0.5 3" src="#texture"></a-event>
+                <a-event name="mouseenter" scale="2 0.5 3"></a-event>
+                <a-event name="mouseleave" scale="2 0.5 3" src="#texture2"></a-event>
+                <a-event name="mouseleave" scale="2 0.5 3"></a-event>
+                <a-animation attribute="rotation" begin="click" to="0 360 0"></a-animation>
+            </a-box>
+            <a-entity>            
+                <a-image look-at="#camera" src="https://ucarecdn.com/eaee168b-c0b4-4cfa-b0c3-f1232c8d9a47/ucimg.png" width="1" height="0.35" position="2 1.2 1">
+                </a-image>
+            </a-entity>  
+            <!-- JavaScript Bloc Resources -->
+<div id="bloc" class="intro-overlay">
+      <p>Welcome to LOUNGE x @32STUDIOS</p>
+      <p>Check out the best lounge on the 3D Internet right now. Feel free to move around the room with W A S D keys. Use the camera and aim at the floor when moving. Get close to the Computers, VR headsets, or 3DPrinters to access our services and content on these platforms. To trigger the action, wait a couple seconds after the cursor turns green. A SoundCloud embed has also been included to provide you with some music while you relax. Visit this site on your mobile and use it with a viewer for the best experience. Many thanks to the A-Frame team. Enjoy</p>
+      <div><a onclick="hide()" class="btn btn-success">Got it!</a></div>
+</div>
+
+  
+            <a-entity>
+                <a-sphere position="2 2 1" radius="0.5" color="#800000">
+                    <a-event name="mouseenter" scale="0.5 0.5 0.5" position = "1 1 0.5"></a-event>
+            </a-entity>
+            <a-entity>
+                <a-sphere position="-120 50 5" radius="15" color="#9B59B6"></a-sphere>
+                    <a-event name="mouseenter" scale="0.5 0.5 0.5" position = "10 10 1"></a-event>
+            </a-entity>
+            <a-entity sound="src: RockeyThemesong.mp3" autoplay="true"></a-entity>
+            <a-sky radius="10000" src="#image" rotation = "0 -180 0"></a-sky>
+            <a-entity light="color:#fff;type:ambient" data-aframe-default-light=""></a-entity>
+            <!--<a-entity id="audio" geometry="primitive: plane" material="color: blue"
+          position="-10 0 0" sound="src: RockeyThemesong.mp3; autoplay: true"></a-entity>                            
+        </a-scene>-->
+
+         
+    </body>
+        
+</html>
