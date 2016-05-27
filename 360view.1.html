@@ -16,6 +16,59 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
         
 
+
+<style>
+      .intro-overlay {
+        z-index: 1;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        max-width: 280px;
+        box-sizing: border-box;
+        padding: 1.5em;
+
+        color: #FFF;
+        background: #222;
+        font-family: Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
+      }
+    
+      .music-overlay {
+        z-index: 99999;
+        position: fixed; 
+        bottom: 20px;
+        left: 20px;
+        box-sizing: border-box;
+        padding: 1.5em;
+        width: 60px;
+        height: 60px;
+        padding-bottom: 0px;
+
+        color: #FFF;
+        background: rgba(255, 255, 255, 0.2) url(http://www.thekandinskyeffect.com/wp-content/themes/somnambulist/assets/icon_sc.svg) center no-repeat;
+        font-family: Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
+      }
+        
+      .menu-overlay {
+         z-index: 99999;
+        position: fixed; 
+        top: 20px;
+        right: 20px;
+        box-sizing: border-box;
+        padding: 1.5em;
+        width: 60px;
+        height: 60px;
+        padding-bottom: 0px;
+
+        color: #FFF;
+        background: rgba(0, 0, 0, 0.5) url(http://www.mrfencer.co.nz/edit/image_cache/icon_menu_960x5000c0.png) center no-repeat;
+        font-family: Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif; 
+      }
+
+    </style>
+    
+
+
+
     </head>
     <body>
   
@@ -100,6 +153,14 @@
           position="-10 0 0" sound="src: RockeyThemesong.mp3; autoplay: true"></a-entity>                            
         </a-scene>-->
         </a-scene>
+      
+      <div id="bloc" class="intro-overlay">
+        <p>Welcome to Zimmer Auditorium</p>
+        <p>Check out each lecture hall in UC buildings. After you look around, click next to go to the next photo. Many thanks to the A-Frame team. Enjoy</p>
+        <div><a onclick="hide()" href = "360view.html" class="btn btn-success">Next</a></div>
+        <div><a onclick="hide()" href = "#" class="btn btn-success">Buildings</a></div>
+        <div><a onclick="hide()" href = "http://nearshorevr.github.io/NearShore/" class="btn btn-success">Home</a></div>
+      </div>
     </body>
         
 </html>
