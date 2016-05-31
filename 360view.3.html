@@ -1,7 +1,7 @@
 <!doctype HTML>
 <html>
     <head>
-        <title>HAPPY BIRTHDAY ESHAN</title>
+        <title>HAPPY BIRTHDAY SHAN</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta charset="utf-8">
         <meta name="description" content="Sky — A-Frame">
@@ -89,23 +89,12 @@
                 <a-cursor fuse="true" color="yellow" material="shader:flat;opacity:0.8;color:yellow" cursor="maxDistance:1000;fuse:true" geometry="primitive:ring;radiusOuter:0.016;radiusInner:0.01;segmentsTheta:64" position="0 0 -1" raycaster=""></a-cursor>
                 </a-entity>-->
            <a-entity>
-               <a-camera id="camera">
+               <a-camera id="camera" rotate="180 0 0">
                <a-cursor color="#4CC3D9"></a-cursor>
                </a-camera>
             </a-entity>
-            <a-box color="#808B96" width="4" height="20" depth="4" position="18 2 -18"" rotation="45 45 45" scale="3 0.3 3" src="#texture">
-    <!-- Animation will only play when the box is clicked. -->
-                <a-event name="mouseenter" scale="2 0.5 3" src="#texture"></a-event>
-                <a-event name="mouseenter" scale="2 0.5 3"></a-event>
-                <a-event name="mouseleave" scale="2 0.5 3" src="#texture2"></a-event>
-                <a-event name="mouseleave" scale="2 0.5 3"></a-event>
-                <a-animation attribute="rotation" begin="click" to="0 360 0"></a-animation>
-            </a-box>
-            <a-box color="#808B96" width="6" height="15" depth="2" position="-20 -5 -20"" rotation="45 45 45" scale="2 0.2 3" src="#bday">
-    <!-- Animation will only play when the box is clicked. -->
-               
-                <a-animation attribute="rotation" begin="click" to="0 360 0"></a-animation>
-            </a-box>
+            
+            <a-curvedimage look-at="#camera" id="bday" src="#bday" radius="5.7" theta-length="100" height="10" position="20 -5 10" opacity="1" rotate="0 0 180"></a-curvedimage>
             <a-box color="#808B96" width="4" height="25" depth="4" position="18 -5 5" rotation="45 45 45" scale="2 0.2 3" src="#bday2">
     <!-- Animation will only play when the box is clicked. -->
                 <a-event name="mouseenter" scale="2 0.5 3" src="#bday2"></a-event>
@@ -155,7 +144,7 @@
         </a-scene>
       
       <div id="bloc" class="intro-overlay">
-        <p>Welcome to Eshan's Birthday VR experience</p>
+        <p>Welcome to Shan's Birthday VR experience</p>
         <p>Check out the ballons flying away and different photos of Eshan and his friends. After you look around, click next to go to the next photo or home to get back to the Near Shore VR site. Many thanks to the A-Frame team.</p>
         <div>
             <a onclick="hide()" href = "http://nearshorevr.github.io/NearShore/" class="btn btn-success">Home</a>

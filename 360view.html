@@ -31,22 +31,6 @@
         background: #222;
         font-family: Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
       }
-    
-      .music-overlay {
-        z-index: 99999;
-        position: fixed; 
-        bottom: 20px;
-        left: 20px;
-        box-sizing: border-box;
-        padding: 1.5em;
-        width: 60px;
-        height: 60px;
-        padding-bottom: 0px;
-
-        color: #FFF;
-        background: rgba(255, 255, 255, 0.2) url(http://www.thekandinskyeffect.com/wp-content/themes/somnambulist/assets/icon_sc.svg) center no-repeat;
-        font-family: Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
-      }
         
       .menu-overlay {
          z-index: 99999;
@@ -98,7 +82,7 @@
                 <a-animation attribute="rotation" begin="click" to="0 360 0"></a-animation>
             </a-box>
             <a-entity>            
-                <a-image look-at="#camera" src="https://ucarecdn.com/eaee168b-c0b4-4cfa-b0c3-f1232c8d9a47/ucimg.png" width="1" height="0.35" position="2 1.2 1">
+                <a-image look-at="#camera" src="https://ucarecdn.com/eaee168b-c0b4-4cfa-b0c3-f1232c8d9a47/ucimg.png" width = "5" height="3" position="0 -2 0" rotate= "0 0 0">
                 </a-image>
             </a-entity>  
             <!-- JavaScript Bloc Resources -->
@@ -110,16 +94,8 @@
 </div>
 
   
-            <a-entity>
-                <a-sphere position="2 2 1" radius="0.5" color="#800000"></a-sphere>
-                    <a-event name="mouseenter" scale="0.5 0.5 0.5" position = "1 1 0.5"></a-event>
-            </a-entity>
-            <a-entity>
-                <a-sphere position="-120 50 5" radius="15" color="#9B59B6"></a-sphere>
-                    <a-event name="mouseenter" scale="0.5 0.5 0.5" position = "10 10 1"></a-event>
-            </a-entity>
-            <a-entity sound="src: RockeyThemesong.mp3" autoplay="true"></a-entity>
-            <a-sky radius="10000" src="#image" rotation = "0 -180 0"></a-sky>
+          
+            <a-sky radius="10000" src="#image" rotation = "0 -180 0" position="0 0 0"></a-sky>
             <a-entity light="color:#fff;type:ambient" data-aframe-default-light=""></a-entity>
             <!--<a-entity id="audio" geometry="primitive: plane" material="color: blue"
           position="-10 0 0" sound="src: RockeyThemesong.mp3; autoplay: true"></a-entity>                            
