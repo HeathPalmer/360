@@ -1,0 +1,128 @@
+<!doctype HTML>
+<html>
+    <head>
+        <title>HAPPY BIRTHDAY ESHAN</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta charset="utf-8">
+        <meta name="description" content="Sky — A-Frame">
+        <script src="https://aframe.io/releases/0.2.0/aframe.js"></script>
+        <script src="aframe.min.js"></script>
+     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+     <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
+        
+
+
+<style>
+      .intro-overlay {
+        z-index: 1;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        max-width: 280px;
+        box-sizing: border-box;
+        padding: 1.5em;
+
+        color: #FFF;
+        background: #222;
+        font-family: Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
+      }
+    
+      .music-overlay {
+        z-index: 99999;
+        position: fixed; 
+        bottom: 20px;
+        left: 20px;
+        box-sizing: border-box;
+        padding: 1.5em;
+        width: 60px;
+        height: 60px;
+        padding-bottom: 0px;
+
+        color: #FFF;
+        background: rgba(255, 255, 255, 0.2) url(http://www.thekandinskyeffect.com/wp-content/themes/somnambulist/assets/icon_sc.svg) center no-repeat;
+        font-family: Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
+      }
+        
+      .menu-overlay {
+        z-index: 99999;
+        position: fixed; 
+        top: 20px;
+        right: 20px;
+        box-sizing: border-box;
+        padding: 1.5em;
+        width: 60px;
+        height: 60px;
+        padding-bottom: 0px;
+
+        color: #FFF;
+        background: rgba(0, 0, 0, 0.5) url(http://www.mrfencer.co.nz/edit/image_cache/icon_menu_960x5000c0.png) center no-repeat;
+        font-family: Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif; 
+      }
+
+    </style>
+    
+
+
+
+    </head>
+    <body>
+  
+        <a-scene>
+            <a-assets>
+                <img id="image" crossorigin="" src="https://ucarecdn.com/6f192485-de67-4ab3-9cfe-11a1574beaab/R00102221_xmp.JPG">
+                <!--<img id="image2" crossorigin="" src="images\R0010050[1]_xmp.jpg">-->
+                <img id="texture" crossorigin="" src="https://ucarecdn.com/ef7c6be7-d397-44ff-9934-5e8da4f06797/eshanpic1.jpg">
+                <img id="texture2" crossorigin ="" src = "https://ucarecdn.com/69d442c1-3b9a-4176-97ee-09ef7a8b95cf/eshanpic4.jpg">
+                
+                <img id="bday" crossorigin="" src="https://ucarecdn.com/aa4f347d-90fb-432b-a731-4a60aa1846c3/bdayeshan.jpg">
+                
+                <img id="bday2" crossorigin="" src="https://ucarecdn.com/0a64e4e9-49ff-4218-8d10-d91aaf667056/eshanpic3.jpg">
+                <img id="bday3" crossorigin="" src="https://ucarecdn.com/f7c6e8cc-f512-4863-9ea7-59bb20af0705/eshanpic1.jpg">
+            </a-assets>
+           <!-- <a-entity position="0 1.8 4">
+                <a-entity camera="active:true" look-controls="" mouse-cursor="" rotation="0 0 0" position="0 0 0">
+                <a-cursor fuse="true" color="yellow" material="shader:flat;opacity:0.8;color:yellow" cursor="maxDistance:1000;fuse:true" geometry="primitive:ring;radiusOuter:0.016;radiusInner:0.01;segmentsTheta:64" position="0 0 -1" raycaster=""></a-cursor>
+                </a-entity>-->
+           <a-entity>
+               <a-camera id="camera">
+               <a-cursor color="#4CC3D9"></a-cursor>
+               </a-camera>
+            </a-entity>
+           
+            <!--<a-entity>            
+                <!--<a-image look-at="#camera" src="https://ucarecdn.com/f7c6e8cc-f512-4863-9ea7-59bb20af0705/eshanpic1.jpg" width="3" height="2" position="1 1.2 1">
+                </a-image>
+            </a-entity>  
+            <a-entity>            
+                <a-image look-at="#camera" src="https://ucarecdn.com/0a64e4e9-49ff-4218-8d10-d91aaf667056/eshanpic3.jpg" width="30" height="20" position="40 -5 2">
+                </a-image>
+            </a-entity>  
+             <a-entity>            
+                <a-image look-at="#camera" src="https://ucarecdn.com/aa4f347d-90fb-432b-a731-4a60aa1846c3/bdayeshan.jpg" width="20" height="10" position="-20 -5 -20">
+                </a-image>
+            </a-entity> --> 
+            
+         
+            <a-sky radius="100" src="#image" rotation = "0 -145 0"></a-sky>
+            <a-entity light="color:#fff;type:ambient" data-aframe-default-light=""></a-entity>
+            <!--<a-entity id="audio" geometry="primitive: plane" material="color: blue"
+          position="-10 0 0" sound="src: RockeyThemesong.mp3; autoplay: true"></a-entity>                            
+        </a-scene>-->
+        </a-scene>
+      
+      <!--<div id="bloc" class="intro-overlay">
+        <p>Welcome to Eshan's Birthday VR experience</p>
+        <p>Check out the ballons flying away and different photos of Eshan and his friends. After you look around, click next to go to the next photo or home to get back to the Near Shore VR site. Many thanks to the A-Frame team.</p>
+        <div>
+            <a onclick="hide()" href = "http://nearshorevr.github.io/NearShore/" class="btn btn-success">Home</a>
+            <a onclick="hide()" href = "360view.html" class="btn btn-success">Next</a>
+        </div>
+      </div>-->
+    </body>
+        
+</html>
