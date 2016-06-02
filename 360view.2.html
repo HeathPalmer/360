@@ -2,85 +2,109 @@
 <html>
     <head>
         <title>Near Shore</title>
-     
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta charset="utf-8">
-       
+        <meta name="description" content="Sky — A-Frame">
+        <script src = "script.js"></script>
         <script src="https://aframe.io/releases/0.2.0/aframe.js"></script>
         <script src="aframe.min.js"></script>
-        <meta name="description" content="Shopping - A-Frame">
-     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-     <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
-    <!-- Latest compiled JavaScript -->
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        
 
-   
+<style>
+      .intro-overlay {
+        z-index: 1;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        max-width: 280px;
+        box-sizing: border-box;
+        padding: 1.5em;
 
-  </head>
-  <body>
-    <a-scene>
-      <a-assets>
-        <a-asset-item id="why-male-models" src="man/man.dae"></a-asset-item>
-        <img id="fall" src="https://ucarecdn.com/1d4a4fac-3ad1-4f37-bd00-6238fc530735/norag.jpg">
-        <img id="goggles" src="https://ucarecdn.com/1d4a4fac-3ad1-4f37-bd00-6238fc530735/norag.jpg">
-        <img id="mozvr" src="https://ucarecdn.com/1d4a4fac-3ad1-4f37-bd00-6238fc530735/norag.jpg">
-        <img id="price" src="https://ucarecdn.com/1d4a4fac-3ad1-4f37-bd00-6238fc530735/norag.jpg">
-        <img id="shadow2" src="https://ucarecdn.com/1d4a4fac-3ad1-4f37-bd00-6238fc530735/norag.jpg">
-        <img id="shoes" src="https://ucarecdn.com/1d4a4fac-3ad1-4f37-bd00-6238fc530735/norag.jpg">
-      </a-assets>
+        color: #FFF;
+        background: #222;
+        font-family: Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
+      }
+        
+      .menu-overlay {
+         z-index: 99999;
+        position: fixed; 
+        top: 20px;
+        right: 20px;
+        box-sizing: border-box;
+        padding: 1.5em;
+        width: 60px;
+        height: 60px;
+        padding-bottom: 0px;
 
-      <a-camera position="0 1.6 0"></a-camera>
+        color: #FFF;
+        background: rgba(0, 0, 0, 0.5) url(http://www.mrfencer.co.nz/edit/image_cache/icon_menu_960x5000c0.png) center no-repeat;
+        font-family: Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif; 
+      }
 
-      <a-entity id="model" position="0 0 -2">
-        <a-animation attribute="rotation" from="0 -30 0" to="0 330 0" dur="15000"
-                     easing="linear" repeat="infinite"></a-animation>
-        <a-collada-model position="-.35 0 .55" rotation="0 -20 0" scale="1.5 1.5 1.5"
-                         src="#why-male-models"></a-collada-model>
-        <a-image src="#shadow2" rotation="-90 0 0" scale="0.5 0.5 0.5"></a-image>
-      </a-entity>
+    </style>
+    
+    
+    
 
-        <a-curvedimage id="mozvr-logo" src="#mozvr" radius="5.7" theta-length="36" height="1"
-                     position="0 2.6 0" opacity="0.5">
-        <a-animation attribute="rotation" from="0 10 0" to="0 200 0" begin="500"
-                     dur="1000"></a-animation>
-      </a-curvedimage>
+    </head>
+    
+    <body>
+  
+        <a-scene>
+            <a-assets>
+                <img id="image" crossorigin="" src="https://ucarecdn.com/01fcd032-acda-409c-b80d-74c2e2530dfe/R00102421_xmp.JPG">
+                <img id="image2" crossorigin="" src="https://ucarecdn.com/2592be7c-a171-4fe3-83b7-3cae17d73342/R00100391_xmp.JPG">
+                <!--<img id="image2" crossorigin="" src="images\R0010050[1]_xmp.jpg">-->
+                <a><img id="texture" crossorigin="" src="https://ucarecdn.com/1d4a4fac-3ad1-4f37-bd00-6238fc530735/norag.jpg"></a>
+                <a href="index.html"><img id="texture2" crossorigin ="" src = "https://ucarecdn.com/e1e3187e-3683-4be1-b000-398b3114e80f/norag2.jpg"></a>
+                <audio id="audio" src="RockeyThemesong.mp3">
+            </a-assets>
+            <!--<a-entity position="0 0 0">
+                <a-entity id="camera" camera="active:true" look-controls="" mouse-cursor="" position="0 0 0">
+                <a-cursor fuse="true" color="red" material="shader:flat;opacity:0.8;color:red" cursor="maxDistance:1000;fuse:true" geometry="primitive:ring;radiusOuter:0.016;radiusInner:0.01;segmentsTheta:64" position="0 0 -1" raycaster=""></a-cursor>
+                </a-entity>-->
+           <a-entity>
+              <a-camera id="camera" look-control= "" mouse-cursor= "">
+              <a-cursor color="#4CC3D9"></a-cursor>
+              </a-camera>
+            </a-entity>
+            <a-box color="#FFF" width="4" height="10" depth="2" position="-25 2 5" rotation="0 0 45" scale="2 0.5 3" src="#texture">
+    <!-- Animation will only play when the box is clicked. -->
+                <a-event name="mouseenter" scale="2 0.5 3" src="#texture"></a-event>
+                <a-event name="mouseenter" scale="2 0.5 3"></a-event>
+                <a-event name="mouseleave" scale="2 0.5 3" src="#texture2"></a-event>
+                <a-event name="mouseleave" scale="2 0.5 3"></a-event>
+                <a-animation attribute="rotation" begin="click" to="0 360 0"></a-animation>
+            </a-box>
+            <a-entity>            
+                <a-image look-at="#camera" src="https://ucarecdn.com/eaee168b-c0b4-4cfa-b0c3-f1232c8d9a47/ucimg.png" width = "5" height="3" position="0 -3 0">
+                </a-image>
+            </a-entity>  
+            <!-- JavaScript Bloc Resources -->
+            <div id="bloc" class="intro-overlay">
+                <p>Welcome to Zimmer Auditorium</p>
+                <p>Check out each lecture hall in UC buildings. After you look around, click next to go to the next photo. Many thanks to the A-Frame team. Enjoy</p>
+                <!--<div><a onclick="changeImage()" class="btn btn-success" >Next</a></div>-->
+                <div><a onclick="hide()" href = "buildings.html" class="btn btn-success">Buildings</a></div>
+            </div>
+            
 
-      <a-image id="price" src="#price" width="7" height="3.5" scale="0.2 0.2 0.2">
-        <a-animation attribute="position" from="0 2.8 -6" to="2.25 2.8 -6" begin="1000"
-                     dur="1000"></a-animation>
-      </a-image>
+            
+          
+            <a-sky radius="10000" src="#image" rotation = "0 0 0" position="0 0 0"></a-sky>
+            <a-entity light="color:#fff;type:ambient" data-aframe-default-light=""></a-entity>
+            <!--<a-entity id="audio" geometry="primitive: plane" material="color: blue"
+          position="-10 0 0" sound="src: RockeyThemesong.mp3; autoplay: true"></a-entity>                            
+        </a-scene>-->
 
-      <a-cylinder id="goggles" color="#101010" height="0.02" radius="0.8">
-        <a-animation attribute="rotation" from="-270 0 0" to="-90 0 0" dur="750" begin="1000"
-                     fill="both"></a-animation>
-        <a-animation attribute="position" from="8 0 -9" to="8 3.5 -9" dur="750" begin="1000"
-                     fill="both"></a-animation>
-        <a-image src="#goggles" width="2" height="1" rotation="90 0 0" position="0 -.05 0"
-                 scale=".4 .4 .4"></a-image>
-      </a-cylinder>
-
-      <a-curvedimage id="stereoscopic-fall-collection-text" src="#fall" radius="5.7"
-                     theta-length="18" height=".45" position="0 0.9 0" scale=".4 .4 .4">
-        <a-animation attribute="rotation" from="0 180 0" to="0 210 0" begin="750"
-                     dur="1000"></a-animation>
-      </a-curvedimage>
-
-      <a-curvedimage id="shoes" src="#shoes" radius="5.7" theta-length="18" height=".8"
-                     position="0 0.9 0" scale=".4 .4 .4">
-        <a-animation attribute="rotation" from="0 180 0" to="0 130 0" begin="750"
-                     dur="1000"></a-animation>
-      </a-curvedimage>
-
-      <a-entity>
-        <a-cylinder position="0 0.5 0" radius="4" height="1.6" side="back" open-ended="true"
-                    color="#FFF"></a-cylinder>
-      </a-entity>
-
-      <a-sky color="#ECECEC"></a-sky>
-      <a-light type="directional" color="#fff" intensity="0.2" position="-1 2 1"></a-light>
-      <a-light type="ambient" color="#fff"></a-light>
-    </a-scene>
-  </body>
+         
+    </body>
+        
 </html>

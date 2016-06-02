@@ -6,3 +6,7 @@ body{
     text-align: center;
     overflow: auto;
 }
+/*.row{
+    text-align: inherit;
+    
+}
