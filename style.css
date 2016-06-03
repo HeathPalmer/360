@@ -9,4 +9,7 @@ body{
 /*.row{
     text-align: inherit;
     
+}*/
+h2 {
+    font-weight: bold;
 }
