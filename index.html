@@ -16,9 +16,25 @@
     <!-- Latest compiled JavaScript -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    
+
+    
+    
 </head>
 <body>
      <!-- I have linked the text to my linkedin and company website -->
+    
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰ open</span>
+    <script>
+    function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+    }
+    </script>
+    
     <div id="links">
     <a href="https://www.linkedin.com/in/heath-palmer-028431b2" target="_blank"><h1>Heath Palmer</h1></a>
     <a><img src="images/Heath.jpg" height="250" width="250"></a>
@@ -84,6 +100,21 @@
     <div class = "row">
         <embed src="HeathPalmerMASTERResume1.pdf" width="1000" height="1175" type='application/pdf'>
     </div>
+    <br>
+    <!--<div class = "overlay">
+        <button class = "modal">I'm a modal</button>
+    </div>-->
+    <div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <div class="overlay-content">
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
+
+
 </body>
 </html>
 <!-- <background-image>
