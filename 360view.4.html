@@ -15,8 +15,17 @@
     <!-- Latest compiled JavaScript -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
         
-
-
+    <template is="a-template" element="a-video" src="" width="3" height="1.75" translate="0 0 0" autoplay="true" loop="true" crossorigin="anonymous">
+  <video id="video" src="${src}" width="${width}" height="${height}" autoplay="${autoplay}" loop="${loop}" crossorigin="${crossOrigin}" style="display: none">
+  </video>
+  <a-entity geometry="primitive: plane;
+                      height: ${height};
+                      width: ${width};
+                      translate: ${translate}" material="shader: flat; src: #video">
+  </a-entity>
+</template>
+    
+    
 <style>
       .intro-overlay {
         z-index: 1;
@@ -83,6 +92,7 @@
                 
                 <img id="bday2" crossorigin="" src="https://ucarecdn.com/0a64e4e9-49ff-4218-8d10-d91aaf667056/eshanpic3.jpg">
                 <img id="bday3" crossorigin="" src="https://ucarecdn.com/f7c6e8cc-f512-4863-9ea7-59bb20af0705/eshanpic1.jpg">
+                 <video id="vid1" preload="auto" src="videos/S1070003.MP4" width="160" height="90"></video>
             </a-assets>
            <!-- <a-entity position="0 1.8 4">
                 <a-entity camera="active:true" look-controls="" mouse-cursor="" rotation="0 0 0" position="0 0 0">
@@ -113,7 +123,47 @@
             <!--<a-entity id="audio" geometry="primitive: plane" material="color: blue"
           position="-10 0 0" sound="src: RockeyThemesong.mp3; autoplay: true"></a-entity>                            
         </a-scene>-->
+                <a-entity data-video-source="vid1" class="soccer-video" autoplay="true" geometry="primitive: plane; width: 28.4; height: 16;" position="-35 11 -60" rotation="0 35 0" material="color: #FFFFFF; shader: flat; src: #vid1"></a-entity>
+        
+       
+            <a-video src="videos/S1070003.mp4" autoplay="true" width="9" height="5" position="0 2.8 -5.519"><a-root>
+  <video id="video" src="videos/S1070003.mp4" width="9" height="5" autoplay="" loop="true" crossorigin="anonymous" style="display: none" controls="">
+  </video>
+  <a-entity geometry="primitive: plane;
+                      height: 5;
+                      width: 9;
+                      translate: 0 0 0" material="shader: flat; src: #video">
+  </a-entity>
+</a-root></a-video>     
+         
+        
         </a-scene>
+<script>
+    $(document).ready(function () {
+        var scene = document.querySelector('a-scene');
+        if (scene.hasLoaded) {
+            run();
+        } else {
+            scene.addEventListener('loaded', run);
+        }
+        function run()
+        {
+            $("a-entity.soccer-video").each(function () {
+                var aEntity = $(this);
+                var videoSource = aEntity.data('videoSource');
+                var videoDom = $('#' + videoSource).get(0);
+                videoDom.volume = 0;
+                videoDom.play();
+                aEntity.on('cursor-mouseenter', function () {
+                    videoDom.volume = 1;
+                }).on('cursor-mouseleave', function () {
+                    videoDom.volume = 0;
+                });
+            });
+        }
+    });
+</script>
+        
       
       <!--<div id="bloc" class="intro-overlay">
         <p>Welcome to Eshan's Birthday VR experience</p>

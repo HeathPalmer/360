@@ -59,9 +59,9 @@
   
         <a-scene>
             <a-assets>
-                <img id="image" crossorigin="" src="https://ucarecdn.com/01fcd032-acda-409c-b80d-74c2e2530dfe/R00102421_xmp.JPG">
+                <img id="image" crossorigin="" src="https://ucarecdn.com/907a7c7f-655f-4b6b-bbdb-f15bdcadab37/R00102441_xmp.JPG">
                 <img id="image2" crossorigin="" src="https://ucarecdn.com/2592be7c-a171-4fe3-83b7-3cae17d73342/R00100391_xmp.JPG">
-                <!--<img id="image2" crossorigin="" src="images\R0010050[1]_xmp.jpg">-->
+                <!--<img id="image2" crossorigin="" src="images/R0010050[1]_xmp.jpg">-->
                 <a><img id="texture" crossorigin="" src="https://ucarecdn.com/eaee168b-c0b4-4cfa-b0c3-f1232c8d9a47/ucimg.png"></a>
                 <a><img id="texture2" crossorigin ="" src = "https://ucarecdn.com/b87450f7-f058-428a-8295-f847a0c02fea/bearcats.jpg"></a>
              
@@ -93,16 +93,15 @@
                 <p>Check out each UC engineering building! After you look around, click next to go to the next photo.</p>
                 <!--<div><a onclick="changeImage()" class="btn btn-success" >Next</a></div>-->
                 <div><a onclick="hide()" href = "buildings.html" class="btn btn-success">Buildings</a>
-                <a onclick="hide()" href = "360view.2.2.html" class="btn btn-success">Next</a></div>
+                <button onclick="history.go(-1)" class="btn btn-success">Back</button></div>
             </div>
-
+             
             <a-sky radius="10000" src="#image" rotation = "0 0 0" position="0 0 0"></a-sky>
             <a-entity light="color:#fff;type:ambient" data-aframe-default-light=""></a-entity>
             <!--<a-entity id="audio" geometry="primitive: plane" material="color: blue"
           position="-10 0 0" sound="src: RockeyThemesong.mp3; autoplay: true"></a-entity>-->                            
         </a-scene>
 
-         
     </body>
         
 </html>
