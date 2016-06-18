@@ -1,0 +1,70 @@
+<!doctype HTML>
+<html>
+    <head>
+        <title>HAPPY FATHER'S DAY</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta charset="utf-8">
+        <meta name="description" content="Sky — A-Frame">
+        <script src="https://aframe.io/releases/0.2.0/aframe.js"></script>
+        <script src="aframe.min.js"></script>
+     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+     <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
+
+ 
+</template>
+
+    </head>
+    <body>
+  
+        <a-scene>
+            <a-assets>
+                <img id="image" crossorigin="" src="https://ucarecdn.com/cfeb2ca9-16a4-4e4e-a1fc-093f6bf9092c/R00103321_xmp.JPG">
+                <img id="texture" crossorigin="" src="https://ucarecdn.com/eaee168b-c0b4-4cfa-b0c3-f1232c8d9a47/ucimg.png">
+                <img id="texture2" crossorigin ="" src = "https://ucarecdn.com/b87450f7-f058-428a-8295-f847a0c02fea/bearcats.jpg">             
+            </a-assets>
+
+            <a-box color="#808080" width="4" height="10" depth="2" position="7 2 30" rotation="0 45 30" scale="2 0.5 3" src="#texture">
+    <!-- Animation will only play when the box is clicked. -->
+                <a-event name="mouseenter" scale="2 0.5 3" src="#texture"></a-event>
+                <a-event name="mouseenter" scale="2 0.5 3"></a-event>
+                <a-event name="mouseleave" scale="2 0.5 3" src="#texture2"></a-event>
+                <a-event name="mouseleave" scale="2 0.5 3"></a-event>
+                <a-animation attribute="rotation" begin="click" to="0 360 0"></a-animation>
+            </a-box>
+           <!-- <a-entity position="0 1.8 4">
+                <a-entity camera="active:true" look-controls="" mouse-cursor="" rotation="0 0 0" position="0 0 0">
+                <a-cursor fuse="true" color="yellow" material="shader:flat;opacity:0.8;color:yellow" cursor="maxDistance:1000;fuse:true" geometry="primitive:ring;radiusOuter:0.016;radiusInner:0.01;segmentsTheta:64" position="0 0 -1" raycaster=""></a-cursor>
+                </a-entity>-->
+           <a-entity rotation="-10 45 0">
+               <a-camera id="camera">
+               <a-cursor color="#4CC3D9"></a-cursor>
+               </a-camera>
+            </a-entity>
+
+            
+         
+            <a-sky radius="100" src="#image" rotation = "0 0 0"></a-sky>
+            <a-entity light="color:#fff;type:ambient" data-aframe-default-light=""></a-entity>
+            <!--<a-entity id="audio" geometry="primitive: plane" material="color: blue"
+          position="-10 0 0" sound="src: RockeyThemesong.mp3; autoplay: true"></a-entity>                            
+        </a-scene>-->
+
+        </a-scene>
+        
+      
+      <!--<div id="bloc" class="intro-overlay">
+        <p>Welcome to My Father's Day VR experience</p>
+        <p>Check out the my family wishing my Dad a happy Father's Day! After you look around, click next to go to the next photo or home to get back to the Near Shore VR site. Many thanks to the A-Frame team.</p>
+        <div>
+            <a onclick="hide()" href = "http://nearshorevr.github.io/NearShore/" class="btn btn-success">Home</a>
+            <a onclick="hide()" href = "360view.html" class="btn btn-success">Next</a>
+        </div>
+      </div>-->
+    </body>
+        
+</html>
