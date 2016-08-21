@@ -59,12 +59,12 @@
   
         <a-scene>
             <a-assets>
-                <img id="image" crossorigin="" src="https://ucarecdn.com/c87b5ff9-95cc-4fc1-a1ef-bdc74abc20d0/R00100501_xmp.JPG">
+                <img id="image" crossorigin="" src="https://ucarecdn.com/01fcd032-acda-409c-b80d-74c2e2530dfe/R00102421_xmp.JPG">
                 <img id="image2" crossorigin="" src="https://ucarecdn.com/2592be7c-a171-4fe3-83b7-3cae17d73342/R00100391_xmp.JPG">
                 <!--<img id="image2" crossorigin="" src="images\R0010050[1]_xmp.jpg">-->
                 <a><img id="texture" crossorigin="" src="https://ucarecdn.com/eaee168b-c0b4-4cfa-b0c3-f1232c8d9a47/ucimg.png"></a>
                 <a><img id="texture2" crossorigin ="" src = "https://ucarecdn.com/b87450f7-f058-428a-8295-f847a0c02fea/bearcats.jpg"></a>
-                <audio id="audio" src="RockeyThemesong.mp3">
+             
             </a-assets>
             <!--<a-entity position="0 0 0">
                 <a-entity id="camera" camera="active:true" look-controls="" mouse-cursor="" position="0 0 0">
@@ -75,7 +75,7 @@
               <a-cursor color="#4CC3D9"></a-cursor>
               </a-camera>
             </a-entity>
-            <a-box color="#808080" width="4" height="10" depth="2" position="20 2 -5" rotation="0 0 45" scale="2 0.5 3" src="#texture">
+            <a-box color="#808080" width="4" height="10" depth="2" position="-25 2 5" rotation="0 0 45" scale="2 0.5 3" src="#texture">
     <!-- Animation will only play when the box is clicked. -->
                 <a-event name="mouseenter" scale="2 0.5 3" src="#texture"></a-event>
                 <a-event name="mouseenter" scale="2 0.5 3"></a-event>
@@ -89,20 +89,18 @@
             </a-entity>  
             <!-- JavaScript Bloc Resources -->
             <div id="bloc" class="intro-overlay">
-                <p>Welcome to Zimmer Auditorium</p>
+                <p>Welcome to Rhodes</p>
                 <p>Check out each UC engineering building! After you look around, click next to go to the next photo.</p>
                 <!--<div><a onclick="changeImage()" class="btn btn-success" >Next</a></div>-->
-                <div><a onclick="hide()" href = "buildings.html" class="btn btn-success">Buildings</a></div>
+                <div><a onclick="hide()" href = "buildings.html" class="btn btn-success">Buildings</a>
+                <a onclick="hide()" href = "360view.2.2.html" class="btn btn-success">Next</a></div>
             </div>
-            
 
-            
-          
             <a-sky radius="10000" src="#image" rotation = "0 0 0" position="0 0 0"></a-sky>
             <a-entity light="color:#fff;type:ambient" data-aframe-default-light=""></a-entity>
             <!--<a-entity id="audio" geometry="primitive: plane" material="color: blue"
-          position="-10 0 0" sound="src: RockeyThemesong.mp3; autoplay: true"></a-entity>                            
-        </a-scene>-->
+          position="-10 0 0" sound="src: RockeyThemesong.mp3; autoplay: true"></a-entity>-->                            
+        </a-scene>
 
          
     </body>

@@ -1,0 +1,51 @@
+<!doctype HTML>
+<html>
+    <head>
+        <title>Welcome to my new Apartment!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta charset="utf-8">
+        <meta name="description" content="Sky — A-Frame">
+        <script src = "script.js"></script>
+        <script src="https://aframe.io/releases/0.2.0/aframe.js"></script>
+        <script src="aframe.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+
+    </head>
+    
+    <body>
+        <a-scene>
+            <a-assets>
+                <img id="image" crossorigin="" src="https://ucarecdn.com/996ccd23-d89c-49e1-8641-94104377abf4/R0010375.JPG">
+
+            </a-assets>
+            <!--<a-entity position="0 0 0">
+                <a-entity id="camera" camera="active:true" look-controls="" mouse-cursor="" position="0 0 0">
+                <a-cursor fuse="true" color="red" material="shader:flat;opacity:0.8;color:red" cursor="maxDistance:1000;fuse:true" geometry="primitive:ring;radiusOuter:0.016;radiusInner:0.01;segmentsTheta:64" position="0 0 -1" raycaster=""></a-cursor>
+                </a-entity>-->
+           <a-entity>
+              <a-camera id="camera" look-control= "" mouse-cursor= "">
+              <a-cursor color="#4CC3D9"></a-cursor>
+              </a-camera>
+            </a-entity>
+
+            <a-entity>            
+                <a-image look-at="#camera" src="https://ucarecdn.com/dd6f00ce-63d5-496a-8b59-c41ea95ea367/bearcats.jpg" width = "5" height="3" position="0 -3 0">
+                </a-image>
+            </a-entity>  
+            <!-- JavaScript Bloc Resources -->
+
+            <a-sky radius="10000" src="#image" rotation = "0 0 0" position="0 0 0"></a-sky>
+            <a-entity light="color:#fff;type:ambient" data-aframe-default-light=""></a-entity>
+            <!--<a-entity id="audio" geometry="primitive: plane" material="color: blue"
+          position="-10 0 0" sound="src: RockeyThemesong.mp3; autoplay: true"></a-entity>                            
+        </a-scene>-->
+
+         
+    </body>
+        
+</html>
