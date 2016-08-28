@@ -5,6 +5,7 @@ html{
 body{
     text-align: center;
     overflow: auto;
+    background-color: lightgray ;
 }
 /*.row{
     text-align: inherit;
@@ -14,6 +15,9 @@ h2 {
     font-weight: bold;
 }
 
+p {
+    font-size: 150%;
+}
 
 .overlay {
     height: 100%;
@@ -64,4 +68,29 @@ h2 {
     right: 35px;
   }
 }
+
+/*
+div.img {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+div.img:hover {
+    border: 1px solid #777;
+}
+
+div.img img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+*/
+
 </style>

@@ -21,12 +21,11 @@
       .intro-overlay {
         z-index: 1;
         position: absolute;
-        top: 20px;
-        left: 20px;
-        max-width: 10%;
+        top: 1%;
+        left: 1%;
+        max-width: 20%;
         box-sizing: border-box;
         padding: 1em;
-        max-height: 20%;
 
         color: #FFF;
         background: #222;
@@ -34,10 +33,10 @@
       }
         
       .menu-overlay {
-        z-index: 99999;
+         z-index: 99999;
         position: fixed; 
-        top: 20px;
-        right: 20px;
+        top: 1%;
+        right: 1%;
         box-sizing: border-box;
         padding: 1em;
         width: 20%;
@@ -51,54 +50,47 @@
 
     </style>
     
+    
+    
+
     </head>
     
     <body>
   
         <a-scene>
             <a-assets>
-                <img id="image" crossorigin="" src="https://ucarecdn.com/01fcd032-acda-409c-b80d-74c2e2530dfe/R00102421_xmp.JPG">
-                <img id="image2" crossorigin="" src="https://ucarecdn.com/2592be7c-a171-4fe3-83b7-3cae17d73342/R00100391_xmp.JPG">
+                <img id="image" crossorigin="" src="https://ucarecdn.com/04eb898e-6ada-43b9-b41a-0adb240e5838/R0010470_xmp.JPG">
+                
                 <!--<img id="image2" crossorigin="" src="images\R0010050[1]_xmp.jpg">-->
-                <a><img id="texture" crossorigin="" src="https://ucarecdn.com/eaee168b-c0b4-4cfa-b0c3-f1232c8d9a47/ucimg.png"></a>
-                <a><img id="texture2" crossorigin ="" src = "https://ucarecdn.com/b87450f7-f058-428a-8295-f847a0c02fea/bearcats.jpg"></a>
-             
             </a-assets>
             <!--<a-entity position="0 0 0">
                 <a-entity id="camera" camera="active:true" look-controls="" mouse-cursor="" position="0 0 0">
                 <a-cursor fuse="true" color="red" material="shader:flat;opacity:0.8;color:red" cursor="maxDistance:1000;fuse:true" geometry="primitive:ring;radiusOuter:0.016;radiusInner:0.01;segmentsTheta:64" position="0 0 -1" raycaster=""></a-cursor>
                 </a-entity>-->
-           <a-entity>
+            <a-entity>
               <a-camera id="camera" look-control= "" mouse-cursor= "">
               <a-cursor color="#4CC3D9"></a-cursor>
               </a-camera>
             </a-entity>
-            <a-box color="#808080" width="4" height="10" depth="2" position="-25 2 5" rotation="0 0 45" scale="2 0.5 3" src="#texture">
-    <!-- Animation will only play when the box is clicked. -->
-                <a-event name="mouseenter" scale="2 0.5 3" src="#texture"></a-event>
-                <a-event name="mouseenter" scale="2 0.5 3"></a-event>
-                <a-event name="mouseleave" scale="2 0.5 3" src="#texture2"></a-event>
-                <a-event name="mouseleave" scale="2 0.5 3"></a-event>
-                <a-animation attribute="rotation" begin="click" to="0 360 0"></a-animation>
-            </a-box>
-            <a-entity>            
+
+            <!--<a-entity>            
                 <a-image look-at="#camera" src="https://ucarecdn.com/eaee168b-c0b4-4cfa-b0c3-f1232c8d9a47/ucimg.png" width = "5" height="3" position="0 -3 0">
                 </a-image>
-            </a-entity>  
+            </a-entity>  -->
             <!-- JavaScript Bloc Resources -->
             <div id="bloc" class="intro-overlay">
-                <p>Welcome to Rhodes</p>
-                <p>Check out each UC engineering building! After you look around, click next to go to the next photo.</p>
-                <!--<div><a onclick="changeImage()" class="btn btn-success" >Next</a></div>-->
-                <div><a onclick="hide()" href = "buildings.html" class="btn btn-success">Buildings</a>
-                <a onclick="hide()" href = "360view.2.2.html" class="btn btn-success">Next</a></div>
+                <p>Welcome to Highbanks Nature Center!</p>
+                <p>Look around and hit next to move.</p>
+                <div><a onclick="hide()" href = "#" class="btn btn-success">Buildings</a>
+                <a onclick="changeImage()" href="360view.1.html" class="btn btn-success" >Next</a>
+                </div>
             </div>
 
             <a-sky radius="10000" src="#image" rotation = "0 0 0" position="0 0 0"></a-sky>
             <a-entity light="color:#fff;type:ambient" data-aframe-default-light=""></a-entity>
             <!--<a-entity id="audio" geometry="primitive: plane" material="color: blue"
-          position="-10 0 0" sound="src: RockeyThemesong.mp3; autoplay: true"></a-entity>-->                            
-        </a-scene>
+          position="-10 0 0" sound="src: RockeyThemesong.mp3; autoplay: true"></a-entity>                            
+        </a-scene>-->
 
          
     </body>
